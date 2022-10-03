@@ -11,7 +11,7 @@ public class TestingServlet extends HttpServlet {
 	PrintWriter pw = res.getWriter();
 	String name = req.getParameter("nm"); //nm in the parameter is textbox name of the form of the html file from where it is called
 	pw.println("<html>");
-	pw.println("<head><title>Hello World</title></head>");
+	pw.println("<head><title>Welcome to Ansible</title></head>");
 	pw.println("<body>");
 	pw.println("Hello " + name);
 	java.util.Date date = new java.util.Date();
