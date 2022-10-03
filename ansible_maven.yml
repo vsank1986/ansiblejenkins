@@ -1,0 +1,8 @@
+---
+ - name: Maven build using Ansible
+   hosts: localhost
+   tasks:
+    - name: Run the Maven build command
+      shell:
+        chdir: /var/lib/jenkins/workspace/simpcourse2_dockeransiblejenkins
+        cmd: mvn clean compile install package
