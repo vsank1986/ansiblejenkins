@@ -2,6 +2,7 @@
  - name: Playbook to deploy WAR file to tomcat server
    hosts: tomcat
    become: yes
+   ignore_error: yes
   # become_user: tomcat
    tasks:
     - name: Copy war file to Tomcat server
