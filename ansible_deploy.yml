@@ -1,0 +1,16 @@
+---
+ - name: Playbook to deploy WAR file to tomcat server
+   hosts: tomcat
+   become: yes
+   become_user: tomcat
+   tasks:
+    - name: Copy war file to Tomcat server
+      copy:
+       src: /var/lib/jenkins/workspace/simpcourse2_dockeransiblejenkins/target/dockeransible.war
+       dest: /opt/tomcat/webapps
+      notify: restart tomcat
+   handlers:
+    - name: restart tomcat
+      systemd:
+       name: tomcat
+       state: restarted
