@@ -6,7 +6,7 @@
    tasks:
     - name: Copy war file to Tomcat server
       copy:
-       src: /var/lib/jenkins/workspace/simpcourse2_dockeransiblejenkins/target/dockeransible.war
+       src: /var/lib/jenkins/workspace/simpcourse2_dockeransiblejenkins/target/ansiblejenkins.war
        dest: /opt/tomcat/webapps
       notify: restart tomcat
    handlers:
